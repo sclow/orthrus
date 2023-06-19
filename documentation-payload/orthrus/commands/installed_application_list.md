@@ -7,7 +7,7 @@ hidden = false
 
 ## Summary
 
-Retrieve a list of installed certificates.
+Retrieve a list of installed applications.
 - Needs Admin: True  
 - Version: 1  
 - Author: @rookuu
