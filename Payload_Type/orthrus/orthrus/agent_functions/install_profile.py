@@ -36,7 +36,7 @@ class InstallProfileCommand(CommandBase):
     is_upload_file = True
     author = "@rookuu"
     argument_class = InstallProfileArguments
-    attackmapping = []
+    attackmapping = ["T1430.001"]
 
     async def create_tasking(self, task: MythicTask) -> MythicTask:
         try:
