@@ -27,7 +27,7 @@ provisioning_profile_list
 
 ## MITRE ATT&CK Mapping
 
-- T1430.001
+- T1072
 
 
 ## Detailed Summary

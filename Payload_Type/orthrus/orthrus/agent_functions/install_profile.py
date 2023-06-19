@@ -1,16 +1,18 @@
 from mythic_container.PayloadBuilder import *
 from mythic_container.MythicCommandBase import *
 import json
+import sys
+import base64
 
 
 class InstallProfileArguments(TaskArguments):
-    def __init__(self, command_line):
-        super().__init__(command_line)
-        self.args = {
-            "file": CommandParameter(
+    def __init__(self, command_line, **kwargs):
+        super().__init__(command_line, **kwargs)
+        self.args = [
+            CommandParameter(
                 name="file", type=ParameterType.File, description="profile to install."
             )
-        }
+        ]
 
     async def parse_arguments(self):
         if len(self.command_line) > 0:
@@ -36,7 +38,7 @@ class InstallProfileCommand(CommandBase):
     is_upload_file = True
     author = "@rookuu"
     argument_class = InstallProfileArguments
-    attackmapping = ["T1430.001"]
+    attackmapping = ["T1072"]
 
     async def create_tasking(self, task: MythicTask) -> MythicTask:
         try:

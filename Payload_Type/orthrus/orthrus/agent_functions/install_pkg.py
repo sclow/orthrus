@@ -1,14 +1,16 @@
 from mythic_container.PayloadBuilder import *
 from mythic_container.MythicCommandBase import *
+import json
+import base64
 
 class InstallPkgArguments(TaskArguments):
-    def __init__(self, command_line):
-        super().__init__(command_line)
-        self.args = {
-            "file": CommandParameter(
+    def __init__(self, command_line, **kwargs):
+        super().__init__(command_line, **kwargs)
+        self.args = [
+            CommandParameter(
                 name="file", type=ParameterType.File, description="Pkg to install, must be signed. Can use the TLS cert of the MDM server."
             )
-        }
+        ]
 
     async def parse_arguments(self):
         if len(self.command_line) > 0:
@@ -46,7 +48,7 @@ class InstallPkgCommand(CommandBase):
         )
         
         if file_resp.status != MythicStatus.Success:
-            raise Exception("Error from Mythic: " + response.error_message)
+            raise Exception("Error from Mythic: " + str(file_resp.error))
 
         return task
 

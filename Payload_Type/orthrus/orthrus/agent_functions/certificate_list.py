@@ -3,9 +3,9 @@ from mythic_container.MythicCommandBase import *
 from mythic_container.MythicRPC import *
 
 class CertificateListArguments(TaskArguments):
-    def __init__(self, command_line):
-        super().__init__(command_line)
-        self.args = {}
+    def __init__(self, command_line, **kwargs):
+        super().__init__(command_line, **kwargs)
+        self.args = []
 
     async def parse_arguments(self):
         pass
@@ -25,7 +25,7 @@ class CertificateListCommand(CommandBase):
     is_upload_file = False
     author = "@rookuu"
     argument_class = CertificateListArguments
-    attackmapping = ["T1588.004 "]
+    attackmapping = ["T1588.004"]
 
     async def create_go_tasking(self, taskData: MythicCommandBase.PTTaskMessageAllData) -> MythicCommandBase.PTTaskCreateTaskingMessageResponse:
         response = MythicCommandBase.PTTaskCreateTaskingMessageResponse(

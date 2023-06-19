@@ -3,9 +3,9 @@ from mythic_container.MythicCommandBase import *
 from mythic_container.MythicRPC import *
 
 class ProfileListArguments(TaskArguments):
-    def __init__(self, command_line):
-        super().__init__(command_line)
-        self.args = {}
+    def __init__(self, command_line, **kwargs):
+        super().__init__(command_line, **kwargs)
+        self.args = []
 
     async def parse_arguments(self):
         pass
@@ -25,7 +25,7 @@ class ProfileListCommand(CommandBase):
     is_upload_file = False
     author = "@rookuu"
     argument_class = ProfileListArguments
-    attackmapping = ["T1430.001"]
+    attackmapping = ["T1072"]
 
     async def create_tasking(self, task: MythicTask) -> MythicTask:
         return task

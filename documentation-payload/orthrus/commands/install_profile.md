@@ -27,7 +27,7 @@ install_profile
 
 ## MITRE ATT&CK Mapping
 
-- T1430.001 
+- T1072
 
 
 ## Detailed Summary

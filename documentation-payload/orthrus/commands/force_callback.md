@@ -27,7 +27,7 @@ force_callback
 
 ## MITRE ATT&CK Mapping
 
-- T1430.001 
+- T1072 
 
 
 ## Detailed Summary
