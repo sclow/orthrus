@@ -32,7 +32,7 @@ installed_application_list
 
 ## Detailed Summary
 
-This is a very noisy and non-opsec safe command since it is based on an embedded bash script which can easily be instrumented.
+This is a very noisy and non-opsec safe command which can easily be instrumented.
 ```
 installed_application_list
 ```
