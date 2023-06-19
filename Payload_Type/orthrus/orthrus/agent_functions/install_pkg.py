@@ -34,7 +34,7 @@ class InstallPkgCommand(CommandBase):
     is_upload_file = True
     author = "@rookuu"
     argument_class = InstallPkgArguments
-    attackmapping = []
+    attackmapping = ["T1072"]
 
     async def create_tasking(self, task: MythicTask) -> MythicTask:
         original_file_name = json.loads(task.original_params)["file"]
