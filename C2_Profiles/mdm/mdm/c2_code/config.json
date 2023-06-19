@@ -1,0 +1,10 @@
+{
+  "webhook_port": 8035,
+  "mythic_mdm_bind_address": 12345,
+  "mdm_host": "10.44.1.50",
+  "tls_cert": "TLS CERT GOES HERE",
+  "tls_key": "TLS KEY GOES HERE",
+  "apn_cert": "APN CERT GOES HERE",
+  "apn_key": "APN KEY GOES HERE",
+  "debug": true
+}
