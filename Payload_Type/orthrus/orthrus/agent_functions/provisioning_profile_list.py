@@ -1,5 +1,6 @@
 from mythic_container.PayloadBuilder import *
 from mythic_container.MythicCommandBase import *
+from mythic_container.MythicRPC import *
 
 class ProvisioningProfileListArguments(TaskArguments):
     def __init__(self, command_line):
@@ -24,7 +25,7 @@ class ProvisioningProfileListCommand(CommandBase):
     is_upload_file = False
     author = "@rookuu"
     argument_class = ProvisioningProfileListArguments
-    attackmapping = []
+    attackmapping = ["T1430.001"]
 
     async def create_tasking(self, task: MythicTask) -> MythicTask:
         return task
