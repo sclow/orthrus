@@ -6,6 +6,10 @@
 
 Orthrus is a macOS agent that uses Apple's MDM to backdoor a device using a malicious profile. It effectively runs its own MDM server and allows the operator to interface with it using Mythic.
 
+This version of Orthrus is compatable with Mythic 3.0.
+
+Please use an older version if on Mythic 2.x.
+
 ## Talks & Publications
 
 - Orthrus was presented in the Black Hat USA 2021 talk [Come to the Dark Side, We Have Apples: Turning macOS Management Evil](https://www.blackhat.com/us-21/briefings/schedule/index.html#come-to-the-dark-side-we-have-apples-turning-macos-management-evil-23582).
